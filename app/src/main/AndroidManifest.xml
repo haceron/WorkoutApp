@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:name="com.example.a7minutesworkoutapp.WorkOutApp"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme._7MinutesWorkoutApp"
+        tools:targetApi="31">
+        <activity
+            android:name="com.example.a7minutesworkoutapp.HistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.a7minutesworkoutapp.BMIActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.a7minutesworkoutapp.FinishActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.example.a7minutesworkoutapp.ExerciseActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar" />
+        <activity
+            android:name="com.example.a7minutesworkoutapp.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
